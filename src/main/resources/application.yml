@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: native-cli-app
+  shell:
+    interactive:
+      enabled: true
+  main:
+    banner-mode: console
+
+logging:
+  level:
+    root: off
+
+application:
+  title: ZiKo Shell
+  version: 1.0.0
