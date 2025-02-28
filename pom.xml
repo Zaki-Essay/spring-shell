@@ -8,11 +8,11 @@
         <version>3.3.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>net.youssfi</groupId>
-    <artifactId>native-cli-app-v2</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>native-cli-app</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>native-cli-app-v2</name>
-    <description>native-cli-app-v2</description>
+    <name>native-cli-app</name>
+    <description>native-cli-app</description>
     <url/>
     <licenses>
         <license/>
@@ -31,14 +31,17 @@
         <spring-shell.version>3.3.1</spring-shell.version>
     </properties>
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-      <!--  <dependency>
+
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>-->
+
         <dependency>
             <groupId>org.springframework.shell</groupId>
             <artifactId>spring-shell-starter</artifactId>
@@ -50,21 +53,25 @@
             <scope>runtime</scope>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <scope>runtime</scope>
         </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.shell</groupId>
             <artifactId>spring-shell-starter-test</artifactId>
