@@ -1,0 +1,24 @@
+# src/main/resources/datasources.yml
+datasources:
+  - name: local-h2
+    type: h2
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: ""
+    driver: org.h2.Driver
+
+  - name: prod-mysql
+    type: mysql
+    host: db.example.com
+    port: 3306
+    database: production
+    username: admin
+    password: ${VAULT_PROD_PASSWORD}
+
+  - name: staging-postgres
+    type: postgresql
+    host: localhost
+    port: 5432
+    database: staging
+    username: user
+    password: pass
