@@ -14,3 +14,11 @@ logging:
 application:
   title: ZiKo Shell
   version: 1.0.0
+
+
+  shell:
+    completion:
+      enabled: true            # Enable autocomplete
+      case-sensitive: false    # Ignore case when suggesting completions
+      script:
+        enabled: true          # Enable generation of completion script (e.g., for bash/zsh)
