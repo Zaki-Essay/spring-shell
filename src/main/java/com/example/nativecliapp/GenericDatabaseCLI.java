@@ -5,13 +5,7 @@ import com.example.nativecliapp.config.SchemaManager;
 import com.example.nativecliapp.dtos.ColumnInfo;
 import com.example.nativecliapp.dtos.DatabaseInfo;
 import com.example.nativecliapp.dtos.TableInfo;
-import com.example.nativecliapp.entities.Product;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.shell.standard.ShellComponent;
 import org.springframework.shell.standard.ShellMethod;
 import org.springframework.shell.standard.ShellOption;
@@ -20,9 +14,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 @ShellComponent
 @Slf4j

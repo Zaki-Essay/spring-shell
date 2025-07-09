@@ -30,7 +30,7 @@ public class DatabaseConnectionManager {
     @Value("${db.default.username:sa}")
     private String defaultUsername;
 
-    @Value("${db.default.password:}")
+    @Value("${db.default.password:sa}")
     private String defaultPassword;
 
     @PostConstruct
@@ -88,15 +88,15 @@ public class DatabaseConnectionManager {
     }
 
     private String getDriverClassName(String dbType) {
-        switch (dbType.toLowerCase()) {
-            case "h2": return "org.h2.Driver";
-            case "mysql": return "com.mysql.cj.jdbc.Driver";
-            case "postgresql": return "org.postgresql.Driver";
-            case "oracle": return "oracle.jdbc.OracleDriver";
-            case "sqlite": return "org.sqlite.JDBC";
-            case "sqlserver": return "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-            default: throw new IllegalArgumentException("Unsupported database type: " + dbType);
-        }
+        return switch (dbType.toLowerCase()) {
+            case "h2" -> "org.h2.Driver";
+            case "mysql" -> "com.mysql.cj.jdbc.Driver";
+            case "postgresql" -> "org.postgresql.Driver";
+            case "oracle" -> "oracle.jdbc.OracleDriver";
+            case "sqlite" -> "org.sqlite.JDBC";
+            case "sqlserver" -> "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+            default -> throw new IllegalArgumentException("Unsupported database type: " + dbType);
+        };
     }
 
     public DatabaseInfo getDatabaseInfo() {
