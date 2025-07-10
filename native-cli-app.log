@@ -59,3 +59,16 @@
 1752094195199:tables
 1752094382813:conns
 1752094389626:info
+1752171171085:help
+1752171179868:connections
+1752171186675:connect --name mysqlConn --type mysql --url jdbc:mysql://localhost:3306/testdb --username user --password pass
+1752171205350:connections
+1752171218341:connect --name pgConn --type postgresql --url jdbc:postgresql://localhost:5432/testdb --username user --password pass
+1752171227943:connection
+1752171237398:connections
+1752171267341:switch --name pgConn
+1752171277016:sql --query "CREATE TABLE test_table (id INT PRIMARY KEY, name VARCHAR(255));"
+1752171751283:help
+1752171783343:tables
+1752171800381:describe testt_table
+1752171815089:describe test_table
