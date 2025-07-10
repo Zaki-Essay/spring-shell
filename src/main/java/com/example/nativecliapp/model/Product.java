@@ -1,4 +1,4 @@
-package com.example.nativecliapp.entities;
+package com.example.nativecliapp.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
