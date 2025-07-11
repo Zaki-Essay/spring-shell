@@ -17,4 +17,6 @@ public class DatabaseInfo {
     private String url;
     private String username;
     private boolean supportsTransactions;
+    private int maxConnections;
+    private String catalogSeparator;
 }

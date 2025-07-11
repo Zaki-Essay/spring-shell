@@ -6,19 +6,31 @@ spring:
       enabled: true
   main:
     banner-mode: console
+database:
+  max-pool-size: 10
+  min-idle: 2
+  connection-timeout: 30000 # in milliseconds
+  idle-timeout: 600000 # in milliseconds
+  max-lifetime: 1800000 # in milliseconds
+  enable-metrics: true
+  health-check-query: "SELECT 1"
+  default-connection:
+    url: "jdbc:h2:mem:testdb"
+    username: "sa"
+    password: ""
+    type: "h2"
 
 logging:
   level:
-    root: off
+    com.yourpackage.database: DEBUG
+    com.zaxxer.hikari: INFO
 
-application:
-  title: ZiKo Shell
-  version: 1.0.0
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,hikaricp
+  endpoint:
+    health:
+      show-details: always
 
-
-  shell:
-    completion:
-      enabled: true            # Enable autocomplete
-      case-sensitive: false    # Ignore case when suggesting completions
-      script:
-        enabled: true          # Enable generation of completion script (e.g., for bash/zsh)
