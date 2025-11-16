@@ -163,6 +163,14 @@ public class DatabaseConnectionManager {
         return dataSource;
     }
 
+    public String getCurrentSchema() {
+        try (Connection connection = getCurrentDataSource().getConnection()) {
+            return connection.getSchema();
+        } catch (SQLException e) {
+            throw new ConnectionException("schema", "Failed to get current schema", e);
+        }
+    }
+
     public String getCurrentConnectionName() {
         return currentConnection.get();
     }

@@ -6,6 +6,12 @@ spring:
       enabled: true
   main:
     banner-mode: console
+    web-application-type: none
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      chat:
+        model: mistral
 database:
   max-pool-size: 10
   min-idle: 2
@@ -33,4 +39,3 @@ management:
   endpoint:
     health:
       show-details: always
-
